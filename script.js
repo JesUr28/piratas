@@ -12,6 +12,23 @@ let utterance = null
 let isSpeaking = false
 let listenBtn = null
 
+function isMobileOrTablet() {
+  return /Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const deviceWarning = document.getElementById("deviceWarning");
+  const appContainer = document.getElementById("appContainer"); // envoltorio principal de tu app (ver abajo)
+
+  if (isMobileOrTablet()) {
+    deviceWarning.style.display = "flex";
+    if (appContainer) appContainer.style.display = "none";
+  } else {
+    deviceWarning.style.display = "none";
+    if (appContainer) appContainer.style.display = "block";
+  }
+});
+
 // Banco de preguntas personalizado para cada tema
 const customTestQuestions = {
   // Módulo 1
