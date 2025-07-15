@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Aventura del Tesoro Pirata - Plataforma Educativa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <div class="logo-pirate">
+                    <i class="fas fa-anchor"></i>
+                </div>
+                <div class="university-name">
+                    <h3>AVENTURA MARINA</h3>
+                    <p>Plataforma Educativa</p>
+                </div>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="sidebar-nav">
+                <div class="nav-item" id="menuBtn">
+                    <div class="nav-icon">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <span class="nav-label">Menú</span>
+                </div>
+                
+                <div class="nav-item active" id="homeBtn">
+                    <div class="nav-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <span class="nav-label">Inicio</span>
+                </div>
+                
+                <div class="nav-item" id="compassBtn">
+                    <div class="nav-icon">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <span class="nav-label">Contáctanos</span>
+                </div>
+                
+                <div class="nav-item" id="helpBtn">
+                    <div class="nav-icon">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    <span class="nav-label">Ayuda</span>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <!-- Home Content -->
+            <section class="home-content active" id="homeContent">
+                <div class="content-wrapper">
+                    <div class="text-content">
+                        <h1 class="main-title">AVENTURA EDUCATIVA </h1>
+                        <h2 class="subtitle">Navegación y aprendizaje en el<br>Mar del Conocimiento</h2>
+                    </div>
+                    
+                    <div class="image-content">
+                        <div class="pirate-illustration">
+                            <div class="treasure-chest">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div class="floating-icons">
+                                <i class="fas fa-ship"></i>
+                                <i class="fas fa-anchor"></i>
+                                <i class="fas fa-compass"></i>
+                                <i class="fas fa-map"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Menu Content -->
+            <section class="menu-content" id="menuContent">
+                <div class="modules-container">
+                    <h2 class="modules-title">MÓDULOS DE AVENTURA</h2>
+                    
+                    <div class="modules-grid">
+                        <!-- Módulo 1 -->
+                        <div class="module-card" data-module="1">
+                            <h3>Módulo 1</h3>
+                            <!-- <div class="module-icon">
+                                <i class="fas fa-cog"></i>
+                            </div> -->
+                            <div class="module-image module-1-image"></div>
+                            <h3>Variables de Proceso</h3>
+                            <p>Descubre los secretos del control de procesos y aprende a dominar las variables que guían el éxito de cualquier operación.</p>
+                        </div>
+
+                        <!-- Módulo 2 -->
+                        <div class="module-card" data-module="2">
+                            <h3>Módulo 2</h3>
+                            <!-- <div class="module-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div> -->
+                            <div class="module-image module-2-image"></div>
+                            <h3>La fórmula del nuevo mundo</h3>
+                            <p>Descubre el secreto para dominar los mares con un poder oculto en un laboratorio flotante.                                  </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Module Route Content -->
+            <section class="module-route-content" id="moduleRouteContent">
+                <div class="route-container">
+                    <div class="route-header">
+                        <button class="back-btn" id="backToModules">
+                            <i class="fas fa-arrow-left"></i>
+                            Volver a Módulos
+                        </button>
+                        <h2 class="route-title" id="routeTitle">MÓDULO SELECCIONADO</h2>
+                    </div>
+                    
+                    <div class="route-map-container">
+                        <div class="route-points-container">
+                            <!-- Los puntos se generarán dinámicamente -->
+                        </div>
+                        
+                        <div class="pirate-captain">
+                            <i class="fas fa-ship"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Topic Content -->
+            <section class="topic-content" id="topicContent">
+                <div class="topic-container">
+                    <div class="topic-header">
+                        <button class="back-btn" id="backToRoute">
+                            <i class="fas fa-arrow-left"></i>
+                            Volver a Ruta
+                        </button>
+                        <h2 class="topic-title" id="topicTitle">TEMA SELECCIONADO</h2>
+                    </div>
+                    
+                    <div class="topic-layout">
+                        <!-- Sidebar con puntos del mapa -->
+                        <aside class="topic-sidebar">
+                            <div class="topic-points-list" id="topicPointsList">
+                                <!-- Los puntos se generarán dinámicamente -->
+                            </div>
+                        </aside>
+                        
+                        <!-- Contenido principal -->
+                        <main class="topic-main-content">
+                            <!-- Botón de escuchar tema (Speech-to-Text) -->
+                            <div class="listen-button-container">
+                                <button class="listen-btn" id="listenBtn">
+                                    <i class="fas fa-volume-up"></i> Escuchar Tema
+                                </button>
+                            </div>
+                            <div class="content-box">
+                                <div class="content-text" id="topicContentText">
+                                    <!-- El contenido se cargará dinámicamente -->
+                                </div>
+                                
+                                <!-- <div class="content-image" id="topicContentImage">
+                                    <div class="example-illustration">
+                                        <i class="fas fa-image"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </main>
+                        
+                        <!-- Sidebar derecho con información adicional -->
+                        <aside class="topic-info-sidebar">
+                            <div class="info-buttons">
+                                <!-- Los botones se generarán dinámicamente -->
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Botón toggle del sidebar -->
+    <button class="sidebar-toggle" id="sidebarToggle">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <!-- Bottom Pagination -->
+    <footer class="pagination-footer">
+        <div class="pagination">
+            <button class="page-btn active" data-module="home">🏠 Inicio</button>
+            <button class="page-btn" data-module="1">Módulo 1</button>
+            <button class="page-btn" data-module="2">Módulo 2</button>
+            <button class="page-next" id="pageNext">
+                <i class="fas fa-chevron-right"></i>
+                Siguiente Aventura
+            </button>
+        </div>
+    </footer>
+
+    <!-- Contenedor de notificaciones -->
+    <div class="notifications-container" id="notificationsContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
