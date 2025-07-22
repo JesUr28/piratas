@@ -775,6 +775,30 @@ body {
   transform: translateX(0);
 }
 
+.topic-content-video {
+  margin-top: 1.5rem;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.topic-content-text-image {
+  overflow: hidden; /* asegura que el contenedor abarque todo */
+  margin-bottom: 0.6rem;
+}
+
+.topic-side-image {
+  float: right;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.topic-content-text {
+  text-align: justify;
+}
+
 .topic-container {
   height: 100%;
   display: flex;
@@ -814,6 +838,7 @@ body {
   background: var(--ocean-blue);
   padding: 1rem;
   overflow-y: auto;
+  height: 100%;
 }
 
 .topic-points-list {
@@ -877,7 +902,7 @@ body {
 .topic-point-icon {
   width: 40px;
   height: 40px;
-  background: var(--teal);
+  background: none;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -888,6 +913,14 @@ body {
 .topic-point-icon i {
   font-size: 1.2rem;
   color: var(--text-light);
+}
+
+.topic-icon-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
 }
 
 .topic-point-text {
@@ -903,7 +936,7 @@ body {
 
 .topic-point-text .title {
   display: block;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: var(--text-light);
   margin-top: 0.2rem;
 }
@@ -1045,12 +1078,34 @@ body {
   margin: 0;
   font-size: 0.9rem;
 }
-
+ 
 /* Topic Info Sidebar */
 .topic-info-sidebar {
   width: 200px;
   background: var(--deep-blue);
   padding: 1rem;
+  overflow-y: auto;     /* Habilita scroll vertical */
+  height: 100%;         /* Usa todo el alto disponible */
+  max-height: 100%; 
+}
+
+/* Estilo para barras de scroll (WebKit) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.3) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 .info-buttons {
@@ -1128,7 +1183,7 @@ body {
 .listen-button-container {
   margin-bottom: 1.5rem; /* Espacio entre el botón y la caja de contenido */
   text-align: center;
-  margin-top: 4%;
+  margin-top: 0%;
 }
 
 .listen-btn {
@@ -1183,7 +1238,7 @@ body {
   background: linear-gradient(135deg, var(--driftwood) 0%, var(--sand) 100%);
   margin-top: 0%;
   padding-top: 0%;
-  padding: 1rem 2rem;
+  padding: 1.22rem 2rem;
   box-shadow: 0 -5px 15px var(--shadow);
 }
 
