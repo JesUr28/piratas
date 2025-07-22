@@ -1403,7 +1403,7 @@ function getContentForButton(buttonId) {
 
       steps: [
       ],
-      image: "images/45.png"
+      image: "images/45.PNG"
     },
 
     // ========== MÓDULO 1 - TEMA 2 (CONCEPTOS BÁSICOS) ==========
@@ -1551,7 +1551,7 @@ function getContentForButton(buttonId) {
       <br><br><b>Enlace al simulador: </b> <a href="https://phet.colorado.edu/es/simulations/concentration" target="_blank" style="color: #1222b6ff;">¡¡ Haz clic aquí !!</a>`,
       steps: [
       ],
-      image: "images/54.png"
+      image: "images/54.PNG"
     },
 
     // ========== MÓDULO 1 - TEMA 5 (IMPLEMENTACIÓN) ==========
