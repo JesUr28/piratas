@@ -29,6 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
 // Banco de preguntas personalizado para cada tema
 const customTestQuestions = {
   // Módulo 1
@@ -88,48 +89,93 @@ const customTestQuestions = {
   "1-2": [
     // Módulo 1, Tema 2
     {
-      question: "¿Qué son los conceptos básicos de variables de proceso?",
+      question: "Responde las preguntas sobre conversión de unidades de temperatura. Se trata de ejercicios de conversión entre °C, °F y K, preguntas de verdadero o falso y selección múltiple.<br><br>1- Convierte 100°C a Fahrenheit usando la fórmula: <br><br>°F = (°C × 9⁄5) + 32",
       options: [
-        "Ideas complejas y avanzadas",
-        "Fundamentos esenciales para entender el control de procesos",
-        "Teorías obsoletas",
-        "Conceptos sin aplicación práctica",
+        "87,5 °F",
+        "212 °F ",
+        "148 °F",
+        "210 °C",
       ],
       correct: 1,
     },
     {
-      question: "¿Cuál es la diferencia entre variable controlada y no controlada?",
+      question: "La temperatura de congelación del agua en Kelvin es 0 K.",
       options: [
-        "No hay diferencia",
-        "La controlada se puede manipular, la no controlada no",
-        "Ambas son iguales",
-        "Solo existe un tipo",
+        "Verdadero",
+        "Falso",
       ],
       correct: 1,
     },
     {
-      question: "¿Qué es un setpoint?",
+      question: "100°F es mayor que 40°C",
       options: [
-        "Un error en el sistema",
-        "El valor deseado de una variable",
-        "Un tipo de sensor",
-        "Una falla del proceso",
+        "Verdadero",
+        "Falso",
       ],
       correct: 1,
     },
     {
-      question: "¿Cómo se clasifican las variables según su naturaleza?",
-      options: ["Continuas y discretas", "Solo continuas", "Solo discretas", "No se clasifican"],
+      question: "¿Qué afirmación es correcta sobre la relación entre °C y K?",
+      options: [
+        "El valor en °C siempre es mayor que en K", 
+        "Ambas escalas tienen la misma magnitud numérica", 
+        "El valor en K siempre es mayor que en °C por 273.15 unidades", 
+        "Para convertir de °C a K se debe restar 273.15"],
+      correct: 2,
+    },
+    {
+      question: "¿Cuál de las siguientes afirmaciones sobre la conversión de diferencias de temperatura (∆T) entre °C y K es correcta?",
+      options: [
+        "Un cambio de 1 °C es igual a un cambio de 1 K",
+        "Un cambio de 1 °C equivale a un cambio de 273.15 K",
+        "Un cambio de 1 K equivale a un cambio de 0 °C",
+        "Para convertir ∆°C a ∆K se debe sumar 273.15",
+      ],
+      correct: 0,
+    },
+  ],
+  "1-3": [
+    // Módulo 1, Tema 3
+    {
+      question: "Seleccione las respuestas correctas:<br><br>Una corriente de oxígeno (O₂) entra a un reactor con flujo molar de 10 mol/min. ¿Cuál es su flujo másico en g/min?",
+      options: [
+        "320 g/min",
+        "0,32 g/min",
+        "3,2 g/min",
+        "160 g/min",
+      ],
       correct: 0,
     },
     {
-      question: "¿Qué es la retroalimentación en un sistema de control?",
+      question: "Se suministra un flujo de nitrógeno (N₂) a razón de 22,4 L/min en condiciones estándar (0 °C y 1 atm). <br><br>¿Cuál es el flujo molar? <br><br>DATO: 1 mol de gas ocupa 22,4 L en condiciones estándar.",
       options: [
-        "Un error del sistema",
-        "La información que regresa del proceso para ajustar el control",
-        "Una falla técnica",
-        "Un tipo de variable",
+        "0,5 mol/min",
+        "2 mol/min",
+        "1 mol/min",
+        "10 mol/min",
       ],
+      correct: 2,
+    },
+    {
+      question: `Ordena de mayor a menor los siguientes flujos másicos:<br><br>
+        A: 5 mol/min de CH₄ (PM = 16,0 g/mol)<br>
+        B: 2 mol/min de CO₂ (PM = 44,0 g/mol)<br>
+        C: 3 mol/min de O₂ (PM = 32,0 g/mol)`,
+      options: [
+        "B > C > A",
+        "C > B > A",
+        "C > B > A",
+        "A > B > C",
+      ],
+      correct: 1,
+    },
+    {
+      question: "Un flujo de dióxido de carbono (CO₂) entra a una columna de absorción con un flujo másico de 88 g/min. <br><br>¿Cuál es el flujo molar? <br><br> Dato: Masa molar del CO₂ = 44.0 g/mol .",
+      options: [
+        "4 mol/min", 
+        "2 mol/min", 
+        "1 mol/min", 
+        "0.5 mol/min"],
       correct: 1,
     },
   ],
@@ -230,110 +276,97 @@ const modulesData = {
     topics: [
       {
         id: 1,
-        title: "Contextualización",
+        title: "Isla de la presión",
         icon: "fas fa-anchor",
         image: "images/30.jpg", // Imagen para el punto del mapa
         content: {
-          title: "Laa leyenda del \"One Process\"",
+          title: "La leyenda del \"One Process\"",
           text: "En un vasto océano de conocimiento, existe una leyenda sobre un tesoro llamado \"One Process \", un poder que otorga a su poseedor el control absoluto sobre los procesos químicos e industriales. Se dice que aquel que logre dominar las variables de proceso podrá navegar por los mares de la ingeniería sin miedo a naufragar.\nTú, joven aprendiz, eres navegante en esta travesía. Para encontrar el One Process, deberás viajar a través de cinco islas legendarias, cada una custodiada por un guardián que pondrá a prueba tu ingenio y habilidades. ¿Serás capaz de superar los desafíos y convertirte en el Gran Monarca de los Procesos?",
           steps: [
-            
           ],
         },
         sidebarButtons: [
-          { id: "que-es", label: "La leyenda del \"One Process\"", icon: "fas fa-question-circle", type: "content" },
-          { id: "objetivos", label: "Objetivos", icon: "fas fa-bullseye", type: "content" },
-          { id: "importancia", label: "Importancia", icon: "fas fa-star", type: "content" },
-          { id: "ejemplos", label: "Ejemplos", icon: "fas fa-lightbulb", type: "content" },
-          { id: "test", label: "Realizar Test", icon: "fas fa-clipboard-check", type: "test" },
+          { id: "que-es", label: "Introducción", icon: "fas fa-question-circle", type: "content" },
+          { id: "variablesP", label: "Las variables de proceso", icon: "fas fa-bullseye", type: "content" },
+          { id: "Ipresion", label: "Isla de la presión", icon: "fas fa-stopwatch", type: "content" },
+          { id: "Cpresion", label: "¿Qué es la presión?", icon: "fas fa-stopwatch", type: "content" },
+          { id: "Tpresion", label: "Tipos de presión", icon: "fas fa-stopwatch", type: "content" },
+          { id: "medicion", label: "Instrumentos de medición", icon: "fas fa-stopwatch", type: "content" },
+          { id: "desafio", label: "Desafío", icon: "fas fa-lightbulb", type: "content" },
+          // { id: "test", label: "Realizar Test", icon: "fas fa-clipboard-check", type: "test" },
         ],
       },
       {
         id: 2,
-        title: "Introducción",
+        title: "Isla del fuego eterno",
         icon: "fas fa-book-open",
         image: "images/2.jpg",
         content: {
-          title: "Introduccion",
+          title: "El Desafío de Calor'Bel",
           text: "Los conceptos básicos incluyen la comprensión de variables controladas, manipuladas y de perturbación, así como los principios de retroalimentación y control automático.",
           steps: [
-            "a. Definición de variables controladas y manipuladas.",
-            "b. Comprensión de perturbaciones y su impacto.",
-            "c. Principios de retroalimentación y control.",
           ],
         },
         sidebarButtons: [
-          { id: "que-es", label: "¿Qué es?", icon: "fas fa-question-circle", type: "content" },
-          { id: "fundamentos", label: "Fundamentos", icon: "fas fa-foundation", type: "content" },
-          { id: "aplicaciones", label: "Aplicaciones", icon: "fas fa-cogs", type: "content" },
-          { id: "recursos", label: "Recursos", icon: "fas fa-tools", type: "content" },
-          { id: "test", label: "Realizar Test", icon: "fas fa-clipboard-check", type: "test" },
+          { id: "que-es", label: "El Desafío de Calor'Bel", icon: "fas fa-question-circle", type: "content" },
+          { id: "islaC", label: "Isla del fuego eterno", icon: "fas fa-fire", type: "content" },
+          { id: "conversion", label: "Conversión de temperaturas", icon: "fas fa-fire", type: "content" },
+          { id: "Vtemperatura", label: "Temperatura", icon: "fas fa-fire", type: "content" },
+          { id: "test", label: "Desafío", icon: "fas fa-lightbulb", type: "test" },
         ],
       },
       {
         id: 3,
-        title: "HERRAMIENTAS",
+        title: "Isla del gran flujo",
         icon: "fas fa-tools",
         image: "images/3.jpg",
         content: {
-          title: "Instrumentos de Medición y Control",
+          title: "Isla del gran flujo",
           text: "Las herramientas incluyen sensores, transmisores, controladores y actuadores que permiten medir, procesar y controlar las variables del proceso.",
           steps: [
-            "a. Selección de sensores apropiados para cada variable.",
-            "b. Configuración de sistemas de transmisión de datos.",
-            "c. Implementación de estrategias de control.",
           ],
         },
         sidebarButtons: [
-          { id: "que-es", label: "¿Qué es?", icon: "fas fa-question-circle", type: "content" },
-          { id: "tipos", label: "Tipos de Herramientas", icon: "fas fa-list", type: "content" },
-          { id: "mantenimiento", label: "Mantenimiento", icon: "fas fa-wrench", type: "content" },
-          { id: "uso-practico", label: "Uso Práctico", icon: "fas fa-hand-paper", type: "content" },
-          { id: "test", label: "Realizar Test", icon: "fas fa-clipboard-check", type: "test" },
+          { id: "que-es", label: "Prueba del capitán Venturi", icon: "fas fa-question-circle", type: "content" },
+          { id: "Iflujo", label: "Isla del gran flujo", icon: "fas fa-tint", type: "content" },
+          { id: "Vflujo", label: "Flujo", icon: "fas fa-tint", type: "content" },
+          { id: "test", label: "Desafío", icon: "fas fa-lightbulb", type: "test" },
         ],
       },
       {
         id: 4,
-        title: "PREPARACIÓN",
+        title: "Isla de la concentración",
         icon: "fas fa-ship",
         image: "images/5.jpg",
         content: {
-          title: "Preparación del Sistema de Control",
+          title: "Isla de la concentración",
           text: "La preparación incluye el diseño del sistema, calibración de instrumentos y establecimiento de procedimientos operativos.",
           steps: [
-            "a. Diseño del esquema de control del proceso.",
-            "b. Calibración y verificación de instrumentos.",
-            "c. Desarrollo de procedimientos operativos estándar.",
           ],
         },
         sidebarButtons: [
-          { id: "que-es", label: "¿Qué es?", icon: "fas fa-question-circle", type: "content" },
-          { id: "planificacion", label: "Planificación", icon: "fas fa-map-marked-alt", type: "content" },
-          { id: "suministros", label: "Suministros", icon: "fas fa-boxes", type: "content" },
-          { id: "seguridad", label: "Seguridad", icon: "fas fa-shield-alt", type: "content" },
-          { id: "test", label: "Realizar Test", icon: "fas fa-clipboard-check", type: "test" },
+          { id: "que-es", label: "El Reto de Alquimix", icon: "fas fa-question-circle", type: "content" },
+          { id: "concentracion", label: "Isla de la concentración", icon: "fas fa-flask	", type: "content" },
+          { id: "expresar", label: "Formas de expresar la concentración", icon: "fas fa-flask	", type: "content" },
+          { id: "VideoC", label: "Concentración", icon: "fas fa-flask", type: "content" },
+          { id: "desafioA", label: "Desafío", icon: "fas fa-lightbulb", type: "content" },
         ],
       },
       {
         id: 5,
-        title: "IMPLEMENTACIÓN",
+        title: "Isla del Gran Saber",
         icon: "fas fa-compass",
         image: "images/8.jpg",
         content: {
-          title: "Implementación del Sistema de Control",
+          title: "Isla del Gran Saber",
           text: "La implementación involucra la puesta en marcha del sistema, ajuste de parámetros y optimización del rendimiento.",
           steps: [
-            "a. Puesta en marcha del sistema de control.",
-            "b. Ajuste fino de parámetros de control.",
-            "c. Optimización continua del rendimiento.",
           ],
         },
         sidebarButtons: [
-          { id: "que-es", label: "¿Qué es?", icon: "fas fa-question-circle", type: "content" },
-          { id: "tecnicas", label: "Técnicas", icon: "fas fa-compass", type: "content" },
-          { id: "monitoreo", label: "Monitoreo", icon: "fas fa-chart-line", type: "content" },
-          { id: "optimizacion", label: "Optimización", icon: "fas fa-cog", type: "content" },
-          { id: "test", label: "Realizar Test", icon: "fas fa-clipboard-check", type: "test" },
+          { id: "que-es", label: "La prueba del One Process", icon: "fas fa-question-circle", type: "content" },
+          { id: "proceso", label: "Proceso real", icon: "fas fa-book-open", type: "content" },
+          { id: "desafioG", label: "Desafío", icon: "fas fa-lightbulb", type: "content" },
         ],
       },
     ],
@@ -736,14 +769,17 @@ function generateTopicPointsList() {
 
     pointItem.innerHTML = `
       <div class="topic-point-icon">
-        <i class="${topic.icon}"></i>
+        ${
+          topic.image
+            ? `<img src="${topic.image}" class="topic-icon-image" alt="${topic.title}">`
+            : `<i class="${topic.icon}"></i>`
+        }
       </div>
       <div class="topic-point-text">
         <span class="number">${topic.id}</span>
         <span class="title">${topic.title}</span>
       </div>
     `
-
     pointItem.addEventListener("click", () => {
       const newTopicData = currentModuleData.topics.find((t) => t.id === topic.id)
       if (newTopicData) {
@@ -1196,48 +1232,83 @@ function showSidebarInNormalView() {
   sidebarVisible = true
 }
 
+// nueva funcion con texto e imagen y video
 function updateTopicMainContent(buttonId) {
-  const topicMainContent = document.getElementById("topicContentText")
-  topicMainContent.innerHTML = ""
+  const topicMainContent = document.getElementById("topicContentText");
+  topicMainContent.innerHTML = "";
 
-  const content = getContentForButton(buttonId)
+  const content = getContentForButton(buttonId);
 
   // Obtener el ID del módulo y tema actual para el data-topic
   const moduleId = Object.keys(modulesData).find((key) =>
-    modulesData[key].topics.some((topic) => topic.id === currentTopicData.id && topic.title === currentTopicData.title),
-  )
-  const topicKey = `${moduleId}-${currentTopicData.id}`
+    modulesData[key].topics.some((topic) => topic.id === currentTopicData.id && topic.title === currentTopicData.title)
+  );
+  const topicKey = `${moduleId}-${currentTopicData.id}`;
 
   // Agregar data-topic al content-box
-  const contentBox = document.querySelector(".content-box")
+  const contentBox = document.querySelector(".content-box");
   if (contentBox) {
-    contentBox.setAttribute("data-topic", topicKey)
+    contentBox.setAttribute("data-topic", topicKey);
   }
 
-  const titleElement = document.createElement("h3")
-  titleElement.textContent = content.title
-  titleElement.className = "topic-content-title"
+  // Título
+  const titleElement = document.createElement("h3");
+  titleElement.textContent = content.title;
+  titleElement.className = "topic-content-title";
+  topicMainContent.appendChild(titleElement);
 
-  const textElement = document.createElement("p")
-  textElement.textContent = content.text
-  textElement.className = "topic-content-text"
+  // Texto + Imagen en un contenedor
+  const textImageContainer = document.createElement("div");
+  textImageContainer.className = "topic-content-text-image";
 
-  const stepsList = document.createElement("ol")
-  stepsList.className = "topic-content-steps"
+  if (content.image) {
+    const imgElement = document.createElement("img");
+    imgElement.src = content.image;
+    imgElement.alt = content.title || "Imagen del subtema";
+    imgElement.className = "topic-side-image";
+    textImageContainer.appendChild(imgElement);
+  }
+
+  const textElement = document.createElement("p");
+  textElement.innerHTML = content.text;
+  textElement.className = "topic-content-text";
+  textImageContainer.appendChild(textElement);
+  
+  topicMainContent.appendChild(textImageContainer);
+
+  // Lista de pasos
+  const stepsList = document.createElement("ol");
+  stepsList.className = "topic-content-steps";
 
   content.steps.forEach((step) => {
-    const stepItem = document.createElement("li")
-    stepItem.textContent = step
-    stepsList.appendChild(stepItem)
-  })
+    const stepItem = document.createElement("li");
+    stepItem.textContent = step;
+    stepsList.appendChild(stepItem);
+  });
 
-  topicMainContent.appendChild(titleElement)
-  topicMainContent.appendChild(textElement)
-  topicMainContent.appendChild(stepsList)
+  topicMainContent.appendChild(stepsList);
 
-  addTopicContentStyles()
-  resetSpeechButton() // Reiniciar el botón de voz al cambiar de subtema
+  // Video (debajo de todo)
+  if (content.video) {
+    const videoContainer = document.createElement("div");
+    videoContainer.className = "topic-content-video";
+    videoContainer.innerHTML = `
+      <iframe width="100%" height="315"
+        src="${content.video}"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    `;
+    topicMainContent.appendChild(videoContainer);
+  }
+    //Esto fuerza que el scroll vaya al inicio del contenedor correcto
+  document.querySelector(".topic-main-content")?.scrollTo({ top: 0, behavior: "smooth" });
+
+  addTopicContentStyles();
+  resetSpeechButton(); // Reiniciar el botón de voz al cambiar de subtema
 }
+
 
 // Función mejorada para contenido específico por tema y subtema
 function getContentForButton(buttonId) {
@@ -1259,188 +1330,270 @@ function getContentForButton(buttonId) {
   const specificContent = {
     // ========== MÓDULO 1 - TEMA 1 (GENERALIDADES) ==========
     "1-1-que-es": {
-      title: "Leyenda del One \"Process\"",
+      title: "Leyenda del \"One Process\"",
       text: "En un vasto océano de conocimiento, existe una leyenda sobre un tesoro llamado \"One Process \", un poder que otorga a su poseedor el control absoluto sobre los procesos químicos e industriales. Se dice que aquel que logre dominar las variables de proceso podrá navegar por los mares de la ingeniería sin miedo a naufragar.\nTú, joven aprendiz, eres navegante en esta travesía. Para encontrar el One Process, deberás viajar a través de cinco islas legendarias, cada una custodiada por un guardián que pondrá a prueba tu ingenio y habilidades. ¿Serás capaz de superar los desafíos y convertirte en el Gran Monarca de los Procesos?",
       steps: [
       ],
+      image: "images/40.jpeg"
     },
-    "1-1-objetivos": {
-      title: "Objetivos del Control",
-      text: "Los objetivos principales del control de variables de proceso incluyen mantener la calidad del producto, optimizar la eficiencia operativa y garantizar la seguridad del proceso.",
+    "1-1-variablesP": {
+      title: "Las variables de proceso",
+      text: "Las variables de proceso son esenciales en la ingeniería, ya que permiten describir y controlar el comportamiento de las sustancias dentro de un sistema. Un proceso implica la transformación de materias primas a través de diversas unidades operativas. Las variables de proceso juegan un papel clave para garantizar la eficacia, seguridad y eficiencia del proceso, y la calidad de los productos y servicios ofrecidos. Su correcta medición y control son fundamentales para mantener la estabilidad y mejorar el desempeño de los procesos.",
       steps: [
-        "a. Mantener la calidad constante del producto final",
-        "b. Optimizar el uso de recursos y energía",
-        "c. Garantizar la seguridad operacional del proceso",
       ],
+      video: "https://www.youtube.com/embed/0JPaVp52rWk"
     },
-    "1-1-importancia": {
-      title: "Importancia del Control de Variables",
-      text: "El control adecuado de variables es fundamental para el éxito de cualquier proceso industrial, ya que permite predecir y controlar el comportamiento del sistema.",
+    "1-1-Ipresion": {
+      title: "El Reino de Baro'Que",
+      text: "Aquí, el pirata Baro'Que, conocido como \"El Señor de la Presión\", controla los mares con su habilidad de manipular la presión del aire y el agua. Para pasar su prueba, debes comprender la diferencia entre presión absoluta y manométrica, así como dominar las herramientas de medición de presión.",
       steps: [
-        "a. Prevención de desviaciones que afecten la calidad",
-        "b. Reducción de costos operativos y desperdicios",
-        "c. Cumplimiento de especificaciones y normativas",
       ],
+      image: "images/41.jpeg"
     },
-    "1-1-ejemplos": {
-      title: "Ejemplos de Variables de Proceso",
-      text: "En la industria encontramos múltiples ejemplos de variables que deben ser controladas para asegurar el funcionamiento óptimo de los procesos.",
+    "1-1-Cpresion": {
+      title: "¿Cómo se define la presión?",
+      text: "La presión se define como la fuerza ejercida por unidad de área (F/A). En el contexto de los fluidos, se utiliza el término presión cuando esta fuerza es ejercida por un gas o un líquido sobre una superficie. Por lo tanto, se expresa en unidades de newtons por metro cuadrado (N/m²), la cual se llama pascal (Pa).",
       steps: [
-        "a. Temperatura en reactores químicos",
-        "b. Presión en sistemas de destilación",
-        "c. Caudal en procesos de transferencia de fluidos",
       ],
+      video: "https://www.youtube.com/embed/xc5dEGnVwUE"
+    },
+    "1-1-Tpresion": {
+      title: "Tipos de presión",
+      text: `<b>Presión absoluta:</b> es la presión medida en relación con el vacío absoluto, el cual representa la ausencia total de presión (cero presión).
+      <br><b>Presión atmosférica:</b> es la presión que ejerce el aire de la atmósfera sobre la superficie terrestre y sobre todos los objetos situados en ella. Su valor varía con la altitud y las condiciones climáticas.
+      <br><b>Presión manométrica:</b> es la diferencia entre la presión absoluta y la presión atmosférica. Corresponde a la presión que mide un manómetro, por lo general sin tener en cuenta la presión atmosférica. Se utiliza comúnmente en sistemas cerrados como tanques, tuberías o equipos presurizados, y no está limitada únicamente a sistemas de aire comprimido.
+      <br><br><b>P absoluta = P manométrica + P atmosférica</b>`,
+      steps: [
+      ],
+      image: "images/42.jpeg"
+    },
+    "1-1-medicion": {
+      title: "Instrumentos de medición",
+      text: `<b style="padding-left: 20px; display: inline-block;">Métodos de elemento elástico</b>
+      <ul style="list-style: disc; padding-left: 20px;">
+      <ul>
+        <li>Tubo Bourdon: mide presión por la deformación de un tubo curvado.</li>
+        <li>Fuelles y diafragmas: se deforman con la presión; usados en presiones bajas o con fluidos especiales.</li>
+      </ul><br>
+
+      <b>Métodos de columna de líquido</b>
+      <ul>
+        <li>Manómetros de líquido: miden presión mediante la altura de una columna de fluido (agua, mercurio, etc.).</li>
+      </ul><br>
+
+      <b>Métodos eléctricos y electrónicos</b>
+      <ul>
+        <li>Manómetros electrónicos: combinan elementos mecánicos con sensores.</li>
+        <li>Transductores piezorresistivos y piezoeléctricos: convierten la presión en señales eléctricas; usados en sistemas automatizados.</li>
+      </ul>`,
+      steps: [
+      ],
+      image: "images/44.jpeg"
+    },
+    "1-1-desafio": {
+      title: "El Reino de Baro'Que",
+      text: `<b>Desafío:</b> Utilizando el <b>simulador PhET</b>, selecciona dos líquidos con diferentes densidades 
+      (por ejemplo, agua y miel). Usa la regla (haciendo clic en su ítem) para medir la altura del líquido en el recipiente 
+      y el manómetro para medir la presión. Puedes controlar el nivel del líquido en el recipiente arrastrando la perilla de 
+      control de flujo superior hacia la derecha para agregar más contenido, o utilizando la perilla inferior para retirar la cantidad necesaria.
+      <br><br>1 - Llena el recipiente con cada líquido hasta la altura máxima y mide la presión a 1 m de profundidad. 
+      <br>2 - Compara los resultados obtenidos con ambos líquidos.      
+      <br><br><b>¿Cuál de los líquidos ejerce mayor presión según la altura asignada? </b>      
+      <br><br><b>Enlace al simulador: </b> <a href="https://phet.colorado.edu/sims/html/under-pressure/latest/under-pressure_all.html?locale=es" target="_blank" style="color: #1222b6ff;">¡¡ Haz clic aquí !!</a>`,
+
+      steps: [
+      ],
+      image: "images/45.png"
     },
 
     // ========== MÓDULO 1 - TEMA 2 (CONCEPTOS BÁSICOS) ==========
     "1-2-que-es": {
-      title: "Conceptos Básicos del Control de Procesos",
-      text: "Los conceptos básicos incluyen la comprensión de variables controladas, manipuladas y de perturbación, así como los principios fundamentales de retroalimentación y control automático.",
+      title: "El Desafío de Calor'Bel",
+      text: "En esta isla volcánica, la pirata Calor'Bel puede cambiar la temperatura a su antojo. Solo aquellos que dominen las escalas de temperatura podrán cruzar sin ser consumidos por las llamas.",
       steps: [
-        "a. Definición de variables controladas y manipuladas",
-        "b. Comprensión de perturbaciones y su impacto",
-        "c. Principios de retroalimentación y control",
+      ],
+      image: "images/46.jpeg"
+    },
+    "1-2-islaC": {
+      title: "Isla del fuego eterno",
+      text: `La temperatura es una variable que afecta las propiedades físicas y químicas de las sustancias. 
+      Su control es esencial, ya que influye en las propiedades fisicoquímicas, en el estado de agregación 
+      (sólido, líquido o gas) y en la velocidad de las reacciones químicas. Es importante comprender que existen 
+      diferentes escalas de temperatura (Kelvin, Celsius, Fahrenheit), por lo que se requieren ecuaciones de conversión entre ellas. 
+      La medición de la temperatura se realiza mediante instrumentos como termómetros, termopares u otros sensores térmicos.`,
+      steps: [
+      ],
+      image: "images/47.jpeg"
+    },
+    "1-2-conversion": {
+      title: "Tabla de conversión de temperaturas",
+      text: `
+      <table style="border-collapse: collapse; width: 100%; text-align: center; font-family: 'Comic Sans MS', cursive; border: 2px solid #a76de0;">
+        <thead>
+          <tr style="background-color: #ffc8c8;">
+            <th style="border: 1px solid #a76de0; padding: 8px;">CONVERTIR</th>
+            <th style="border: 1px solid #a76de0; padding: 8px;">ECUACIÓN</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border: 1px solid #a76de0; padding: 8px;">°C → °F</td>
+            <td style="border: 1px solid #a76de0; padding: 8px;">°F = (9/5 * °C) + 32</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #a76de0; padding: 8px;">°F → °C</td>
+            <td style="border: 1px solid #a76de0; padding: 8px;">°C = 5/9 (°F - 32)</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #a76de0; padding: 8px;">°C → K</td>
+            <td style="border: 1px solid #a76de0; padding: 8px;">K = °C + 273.15</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #a76de0; padding: 8px;">K → °C</td>
+            <td style="border: 1px solid #a76de0; padding: 8px;">°C = K - 273.15</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #a76de0; padding: 8px;">°F → K</td>
+            <td style="border: 1px solid #a76de0; padding: 8px;">K = 5/9 (°F - 32) + 273.15</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #a76de0; padding: 8px;">K → °F</td>
+            <td style="border: 1px solid #a76de0; padding: 8px;">°F = 9/5 (K - 273.15) + 32</td>
+          </tr>
+        </tbody>
+      </table>`,
+      steps: [
       ],
     },
-    "1-2-fundamentos": {
-      title: "Fundamentos Teóricos",
-      text: "Los fundamentos teóricos del control de procesos se basan en principios matemáticos y físicos que permiten modelar y predecir el comportamiento de los sistemas.",
+    "1-2-Vtemperatura": {
+      title: "Video explicativo de la temperatura",
+      text: "",
       steps: [
-        "a. Modelos matemáticos de procesos dinámicos",
-        "b. Teoría de control clásico y moderno",
-        "c. Análisis de estabilidad y respuesta temporal",
       ],
-    },
-    "1-2-aplicaciones": {
-      title: "Aplicaciones Industriales",
-      text: "Las aplicaciones del control de procesos se extienden a múltiples industrias, desde la petroquímica hasta la alimentaria, cada una con sus particularidades específicas.",
-      steps: [
-        "a. Control de temperatura en hornos industriales",
-        "b. Regulación de pH en procesos químicos",
-        "c. Control de nivel en tanques de almacenamiento",
-      ],
-    },
-    "1-2-recursos": {
-      title: "Recursos y Herramientas",
-      text: "Los recursos necesarios para implementar control de procesos incluyen hardware especializado, software de control y personal capacitado.",
-      steps: [
-        "a. Sensores y transmisores de campo",
-        "b. Sistemas de control distribuido (DCS)",
-        "c. Software de simulación y modelado",
-      ],
+      video: "https://www.youtube.com/embed/WUVAUrvzsgo"
     },
 
     // ========== MÓDULO 1 - TEMA 3 (HERRAMIENTAS) ==========
     "1-3-que-es": {
-      title: "Instrumentos de Medición y Control",
-      text: "Las herramientas incluyen sensores, transmisores, controladores y actuadores que permiten medir, procesar y controlar las variables del proceso de manera precisa y confiable.",
+      title: "La prueba del capitán Venturi",
+      text: "El Capitán Venturi, un legendario navegante, controla los ríos subterráneos de esta isla con su dominio del flujo volumétrico, másico y molar. Para seguir adelante, debes demostrar tu capacidad para calcular, diferenciar y relacionar estos tipos de flujo en un sistema de tuberías.",
       steps: [
-        "a. Selección de sensores apropiados para cada variable",
-        "b. Configuración de sistemas de transmisión de datos",
-        "c. Implementación de estrategias de control",
       ],
+      image: "images/49.jpeg"
     },
-    "1-3-tipos": {
-      title: "Tipos de Herramientas de Control",
-      text: "Existen diversos tipos de herramientas especializadas para diferentes variables y aplicaciones industriales, cada una con características técnicas específicas.",
+    "1-3-Iflujo": {
+      title: "Isla del gran flujo",
+      text: "El flujo se refiere al movimiento de material (generalmente, un fluido) dentro de un proceso y puede ser másico, molar o volumétrico. Es esencial para calcular la cantidad de producción en un proceso. Las velocidades de flujo son variables críticas, e influyen en la caída de presión y determinan parámetros de diseño, en sistemas de transporte en tuberías y ductos.",
       steps: [
-        "a. Sensores de temperatura: termopares, RTD, termistores",
-        "b. Medidores de presión: manómetros, transmisores electrónicos",
-        "c. Medidores de flujo: turbinas, electromagnéticos, ultrasónicos",
       ],
+      image: "images/50.jpeg"
     },
-    "1-3-mantenimiento": {
-      title: "Mantenimiento de Instrumentos",
-      text: "El mantenimiento preventivo y correctivo de los instrumentos es crucial para garantizar mediciones precisas y operación confiable del sistema de control.",
+    "1-3-Vflujo": {
+      title: "Video explicativo del flujo",
+      text: "",
       steps: [
-        "a. Calibración periódica de instrumentos de medición",
-        "b. Inspección visual y limpieza de sensores",
-        "c. Verificación de conexiones eléctricas y neumáticas",
       ],
-    },
-    "1-3-uso-practico": {
-      title: "Uso Práctico de Instrumentos",
-      text: "La aplicación práctica de los instrumentos requiere conocimiento técnico sobre instalación, configuración y operación en condiciones industriales reales.",
-      steps: [
-        "a. Instalación correcta según especificaciones técnicas",
-        "b. Configuración de parámetros operativos",
-        "c. Interpretación de señales y diagnóstico de fallas",
-      ],
+      video: "https://www.youtube.com/embed/OicdnB4vSqI"
     },
 
     // ========== MÓDULO 1 - TEMA 4 (PREPARACIÓN) ==========
     "1-4-que-es": {
-      title: "Preparación del Sistema de Control",
-      text: "La preparación incluye el diseño del sistema, calibración de instrumentos y establecimiento de procedimientos operativos para garantizar un funcionamiento óptimo.",
+      title: "El Reto de Alquimix",
+      text: `El alquimista Alquimix protege la receta del elixir más puro del mundo, 
+      pero solo aquellos que dominen la concentración y la composición de las soluciones podrán obtenerla. 
+      Aquí aprenderás sobre unidades como Normalidad (N), Molaridad (M), ppm, ppb, %p/p, %p/V, %mol/mol.`,
       steps: [
-        "a. Diseño del esquema de control del proceso",
-        "b. Calibración y verificación de instrumentos",
-        "c. Desarrollo de procedimientos operativos estándar",
       ],
+      image: "images/51.jpeg"
     },
-    "1-4-planificacion": {
-      title: "Planificación del Sistema",
-      text: "La planificación efectiva del sistema de control requiere análisis detallado de requisitos, selección de tecnologías apropiadas y diseño de arquitecturas robustas.",
+    "1-4-concentracion": {
+      title: "Isla de la concentración",
+      text: `La concentración química se refiere a la medida de la cantidad de soluto presente en una solución, disolución o mezcla. La concentración cuantifica la proporción de soluto respecto a la solución total (soluto+disolvente). Algunas unidades específicas también expresan esta proporción en relación directa con la cantidad de disolvente. <br>
+      <b>Soluto: </b> La sustancia que se disuelve en el disolvente.
+      <br><b>Disolvente: </b> La sustancia que disuelve el soluto.
+      <br><b>Solución: </b> La mezcla homogénea resultante de la combinación del soluto y el disolvente.`,
       steps: [
-        "a. Análisis de requisitos funcionales y de rendimiento",
-        "b. Selección de hardware y software de control",
-        "c. Diseño de arquitectura de red y comunicaciones",
       ],
+      image: "images/52.jpeg"
     },
-    "1-4-suministros": {
-      title: "Suministros y Materiales",
-      text: "Los suministros necesarios incluyen instrumentos, cables, gabinetes, software y herramientas especializadas para la implementación del sistema.",
+    "1-4-expresar": {
+      title: "¿Cómo se expresa la concentración?",
+      text: `La concentración se expresa de diferentes maneras, siendo las más comunes:
+      <br><b> Molaridad (M): </b> Moles de soluto por litro de solución. 
+      <br><b> Fracción másica (p/p): </b> Masa de soluto por 100 gramos de solución. 
+      <br><b> Fracción molar (mol/mol): </b> Moles de soluto por el total de moles en la solución. 
+      <br><b> Normalidad (N): </b> Equivalentes-gramo de soluto por litro de solución.
+      <br><b> Molaridad (M): </b> Moles de soluto por litro de solución.
+      <br><b> Partes por millón (ppm): </b> Miligramos de soluto por litro de solución (mg/L) o por kilogramo, dependiendo del sistema.
+      <br><b> Partes por billón (ppb): </b> Microgramos de soluto por litro (µg/L) o por kilogramo.
+      <br><b> Porcentaje masa a masa (%p/p): </b> Gramos de soluto por 100 gramos de solución.
+      <br><b> Porcentaje masa a volumen (%p/v): </b> Gramos de soluto por 100 mL de solución.
+      <br><b> Porcentaje molar (%mol/mol): </b> Moles de soluto por 100 moles de solución
+      <br><b> Fracción másica (w): </b> Relación entre la masa del soluto y la masa total de la solución (adimensional, puede expresarse en decimal o en porcentaje).`,
       steps: [
-        "a. Instrumentos de campo: sensores, transmisores, válvulas",
-        "b. Equipos de control: PLC, DCS, sistemas SCADA",
-        "c. Materiales auxiliares: cables, gabinetes, fuentes de poder",
       ],
+      image: "images/53.jpeg"
     },
-    "1-4-seguridad": {
-      title: "Aspectos de Seguridad",
-      text: "La seguridad en sistemas de control incluye protección de personal, equipos y medio ambiente, así como ciberseguridad industrial.",
+    "1-4-VideoC": {
+      title: "Video explicativo de la concentración",
+      text: "",
       steps: [
-        "a. Sistemas de seguridad instrumentados (SIS)",
-        "b. Protocolos de seguridad cibernética",
-        "c. Procedimientos de emergencia y parada segura",
       ],
+      video: "https://www.youtube.com/embed/2A0CDxUAld4"
+    },
+    "1-4-desafioA": {
+      title: "El Reto de Alquimix",
+      text: `<b>Desafío:</b> En el <b>simulador PhET</b>, simula una solución con 1 L de agua, agrega 0,5 moles de soluto y calcula la molaridad (M). 
+      <br><br>Luego, observa qué sucede con la molaridad si agregas más soluto sin cambiar el volumen.
+      <br><br>Ahora analiza cuánto sería la molaridad si agregas 1 mol en solo 0,25 L.
+      <br><br>Finalmente, compara dos soluciones utilizando como solutos nitrato de cobalto y sulfato de cobre, agregando la misma cantidad de moles y volumen en cada caso. 
+      <br><br>Observa las diferencias en la concentración que se generan y reflexiona sobre cómo influye el tipo de soluto en la representación visual del simulador.
+      <br><br><b>Enlace al simulador: </b> <a href="https://phet.colorado.edu/es/simulations/concentration" target="_blank" style="color: #1222b6ff;">¡¡ Haz clic aquí !!</a>`,
+      steps: [
+      ],
+      image: "images/54.png"
     },
 
     // ========== MÓDULO 1 - TEMA 5 (IMPLEMENTACIÓN) ==========
     "1-5-que-es": {
-      title: "Implementación del Sistema de Control",
-      text: "La implementación involucra la puesta en marcha del sistema, ajuste de parámetros y optimización del rendimiento para lograr los objetivos operacionales.",
+      title: "El último desafío",
+      text: `Después de superar todas las islas, llegas a la Isla del Gran Saber, donde una antigua y gran maestra del conocimiento te hará una última prueba: integrar todas las variables de proceso en un gran caso de estudio. Solo entonces, recibirás el título de Gran Monarca de los Procesos y descubrirás el secreto del One Process.
+      <br><br><b>Desafío final:</b> Analiza un proceso real donde debas aplicar todos los conocimientos adquiridos.`,
       steps: [
-        "a. Puesta en marcha del sistema de control",
-        "b. Ajuste fino de parámetros de control",
-        "c. Optimización continua del rendimiento",
       ],
+      image: "images/55.jpeg"
     },
-    "1-5-tecnicas": {
-      title: "Técnicas de Implementación",
-      text: "Las técnicas de implementación incluyen metodologías probadas para la puesta en marcha, comisionado y optimización de sistemas de control industrial.",
+    "1-5-proceso": {
+      title: "Aplicación en un caso real",
+      text: `<p>Una planta química produce etanol (EtOH) a partir de una mezcla líquida de etanol y agua, proveniente de una unidad de fermentación. Esta mezcla alimenta una torre de destilación para purificar el etanol.</p>
+      <ul>
+        <li><strong>Temperatura de operación:</strong> 80 °C</li>
+        <li><strong>Presión de operación:</strong> 1,5 atm</li>
+        <li><strong>Flujo volumétrico de alimentación gaseosa (EtOH puro):</strong> 500 L/h</li>
+      </ul>
+      <p><br><strong>Datos físicos:</strong></p>
+      <ul>
+        <li><strong>Masa molar del etanol:</strong> 46,07 g/mol</li>
+        <li><strong>Densidad líquida del etanol a 25 °C:</strong> 789 kg/m³</li>
+        <li><strong>Constante de gas:</strong> R = 0,08205 L·atm/mol·K</li>
+      </ul>`,
       steps: [
-        "a. Comisionado por etapas y pruebas funcionales",
-        "b. Sintonización de controladores PID",
-        "c. Validación de lazos de control y alarmas",
       ],
+      image: "images/56.jpeg"
     },
-    "1-5-monitoreo": {
-      title: "Monitoreo y Supervisión",
-      text: "El monitoreo continuo permite detectar desviaciones, diagnosticar problemas y mantener el rendimiento óptimo del sistema de control.",
+    "1-5-desafioG": {
+      title: "Realiza estos enunciados",
+      text: `
+      1-	Convertir el flujo volumétrico de etanol a flujo molar (mol/h) usando la ley de los gases ideales.<br><br>
+      2-	Calcular el flujo másico de etanol (kg/h) a partir del flujo molar.<br><br>
+      3-	¿Cuál sería el volumen que ocuparía ese mismo flujo molar a condiciones estándar (0 °C y 1 atm)?<br><br>
+      4-	¿Cuánto cambia la densidad del etanol gaseoso al pasar de condiciones estándar a las condiciones de operación?<br><br>
+      5-	Si se aumenta la presión a 2,0 atm manteniendo la misma temperatura, ¿qué ocurre con el volumen del gas?<br>
+      -	Aumenta<br>
+      -	Disminuye<br>
+      -	Permanece constante<br><br>
+        Justifica tu respuesta brevemente con una fórmula o concepto.`,
       steps: [
-        "a. Sistemas de monitoreo en tiempo real",
-        "b. Análisis de tendencias y KPIs operacionales",
-        "c. Diagnóstico predictivo y mantenimiento basado en condición",
-      ],
-    },
-    "1-5-optimizacion": {
-      title: "Optimización Continua",
-      text: "La optimización continua busca mejorar el rendimiento del sistema mediante análisis de datos, ajustes de parámetros y mejoras tecnológicas.",
-      steps: [
-        "a. Análisis de datos históricos y patrones operacionales",
-        "b. Implementación de mejoras y actualizaciones",
-        "c. Evaluación de ROI y beneficios operacionales",
       ],
     },
 
